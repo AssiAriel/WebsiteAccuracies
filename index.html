@@ -17,22 +17,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap" rel="stylesheet">
 
     <style>
+        /* =============================================
+           DESIGN TOKENS (CSS Custom Properties)
+           ============================================= */
         :root {
-            --bg-color: #eeedef;
+            --page-background: #eeedef;
             --text-main: #18181b;
             --text-muted: #52525b;
             --accent-blue: #157bce;
             --logo-blue: #104b7b;
             --border-color: #d4d4d8;
-            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             --font-logo: 'Work Sans', sans-serif;
-            --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            --font-monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
         }
 
+        /* =============================================
+           BASE & PAGE LAYOUT
+           ============================================= */
         body {
-            background-color: var(--bg-color);
+            background-color: var(--page-background);
             color: var(--text-main);
-            font-family: var(--font-sans);
+            font-family: var(--font-sans-serif);
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -46,15 +52,20 @@
             padding: 4rem 2rem;
         }
 
+        /* =============================================
+           HEADER
+           ============================================= */
         header {
-            margin-bottom: 2rem; /* Reduced now that the line is gone */
-            /* Removed border-bottom and padding-bottom */
+            margin-bottom: 2rem;
         }
 
+        /* =============================================
+           LOGO
+           ============================================= */
         .logo-container {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centers the text and the line relative to each other */
+            align-items: center;
             width: fit-content;
             margin-bottom: 2.5rem;
         }
@@ -65,16 +76,19 @@
             color: var(--logo-blue);
             font-weight: 400;
             line-height: 0.9;
-            letter-spacing: 0.05em; /* Spaced letters */
+            letter-spacing: 0.05em;
         }
 
         .logo-line {
-            width: 80%; /* Shorter from both sides */
+            width: 80%;
             height: 3px;
             background-color: var(--logo-blue);
-            margin: 15px auto 0 auto; /* Centered with vertical offset */
+            margin: 15px auto 0 auto;
         }
 
+        /* =============================================
+           TYPOGRAPHY
+           ============================================= */
         h1 {
             font-size: 1.75rem;
             font-weight: 600;
@@ -83,23 +97,8 @@
             margin-bottom: 1rem;
         }
 
-        .status-badge {
-            display: inline-block;
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            background-color: #e4e4e7;
-            color: var(--accent-blue);
-            padding: 0.4rem 0.8rem;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-        }
-
-        section {
-            margin-bottom: 4rem;
-        }
-
         h2 {
-            font-family: var(--font-mono);
+            font-family: var(--font-monospace);
             font-size: 1.1rem;
             color: var(--accent-blue);
             text-transform: uppercase;
@@ -128,15 +127,42 @@
             font-weight: 600;
         }
 
+        /* =============================================
+           CONTENT SECTIONS
+           ============================================= */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        /* =============================================
+           COMPONENTS
+           ============================================= */
+        .status-badge {
+            display: inline-block;
+            font-family: var(--font-monospace);
+            font-size: 0.85rem;
+            background-color: #e4e4e7;
+            color: var(--accent-blue);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* =============================================
+           FOOTER
+           ============================================= */
         footer {
             margin-top: 1rem;
-            padding-top: 0rem; /* As per your request to reduce the gap */
+            padding-top: 0rem;
             border-top: 2px solid var(--border-color);
-            font-family: var(--font-mono);
+            font-family: var(--font-monospace);
             font-size: 0.9rem;
             padding-bottom: 2rem;
         }
 
+        /* =============================================
+           LINKS
+           ============================================= */
         a {
             color: var(--accent-blue);
             text-decoration: none;
@@ -149,8 +175,8 @@
     </style>
 </head>
 <body>
-
     <div class="container">
+        <!--- Header -->
         <header>
             <div class="logo-container">
                 <div class="logo-text">accuracies</div>
@@ -159,38 +185,56 @@
             <h1>High-Precision Edge AI System</h1>
         </header>
 
+        <!--- Body text -->
         <main>
-            <section id="problem">
-                <h2> The Accuracy Gap & Execution Barrier</h2>
+            <section id="Challenge">
+                <h2> The Edge AI Challenge</h2>
                 <ul>
-                    <li><strong>The Generative Problem:</strong> Standard LLMs estimate the "most likely story" rather than executing precise, repeatable tasks.</li>
-                    <li><strong>Reliability Deficiency:</strong> Current models lack the consistency required for professional and industrial workflows.</li>
-                    <li><strong>The Privacy Risk:</strong> External AIs expose sensitive enterprise and device data to the internet—an unacceptable risk for confidential information.</li>
+                    <!--- Challenge -->
+
+
+                    <li>Accuracies is a high-precision AI execution engine built for the edge. Operating locally on standard laptops and industrial machinery, it secures data privacy by design while eliminating cloud dependencies. To overcome the estimation failures of standard generative models, we built a coupled architecture that separates language processing from software execution. Using proprietary training methods that prioritize strict parameter routing over conversational abstraction, the system delivers predictable, highly consistent accuracy. Currently benchmarked against complex, multi-step Excel operations, the engine successfully executes strict tasks that standard models fundamentally fail..</li>
+<br>
+<br>
+
+                    <li>Accuracies is a high-precision AI execution engine engineered for the edge. It operates entirely offline on standard laptops and machinery, natively securing enterprise data privacy without cloud dependencies.
+<br>
+<br>To solve the accuracy problem of standard models, we utilize a coupled architecture that separates language processing from software execution. Powered by proprietary training methods, our local model prioritizes strict parameter routing over conversational abstraction to deliver predictable, verifiable results.
+<br>
+<br>The engine is currently benchmarked against strict Excel operations. By systematically stabilizing output behavior in this unforgiving environment, the system consistently executes multi-step tasks that traditional models fail..</li>
+<br>
+<br>
+
+                    <li><strong>The Accuracy Gap:</strong> Standard LLMs are semantic estimation engines. They approximate the most plausible response based on complex patterns rather than calculating deterministic logic. Because they estimate rather than compute, they cannot guarantee exact, repeatable outputs.</li>
+                    <li><strong>The Privacy Risk:</strong> Relying on cloud-based AI requires transmitting sensitive enterprise and device data to external servers, creating unacceptable security vulnerabilities and compliance risks.</li>
+                    <li><strong>The Execution Barrier:</strong> Estimation is the enemy of execution. Because standard models operate by approximating sequences, they inherently fail at rigid, multi-step software execution and cannot be relied upon for critical deterministic workflows.</li>
                 </ul>
             </section>
 
-            <section id="solution">
-                <h2> Coupled AI Architecture</h2>
-                <p>A proprietary system merging the "Thinking" LLM with deterministic software to provide repeatable high-accuracy execution.</p>
+            <section id="validation">
+                <h2> Accuracies: High-Precision AI Worker</h2>
                 <ul>
-                    <li><strong>Model Training Method:</strong> Powered by optimized Local Models, proprietarily trained for functional reliability rather than conversational philosophy.</li>
-                    <li><strong>Deterministic Layer:</strong> A local execution environment that manages the model's intent to ensure precise outputs.</li>
-                    <li><strong>Universal Edge Deployment:</strong> Runs locally on laptops or machinery to guarantee privacy with zero cloud dependency.</li>
+
+                    <!--- Solution -->
+                    <li><strong>The Engine:</strong> A local inference engine built strictly for deterministic execution rather than semantic approximation.</li>
+                    <li><strong>Coupled AI Architecture:</strong> We separate reasoning from execution. An optimized local LLM acts solely as a translation layer, mapping unpredicted user intent to a deterministic, locally hosted software execution and validation loop.</li>
+                    <li><strong>Proprietary Training Method:</strong> Standard models are trained to estimate conversational narratives. We utilize a proprietary training pipeline to force localized models to master functional reliability and precise parameter routing, stripping away abstract approximation.</li>
+                    <li><strong>Universal Edge Deployment:</strong> The entire architecture runs offline on standard end-user hardware. It executes tasks locally without cloud inference, third-party APIs, or internet connectivity.</li>
                 </ul>
             </section>
 
-            <section id="evidence">
-                <h2> Execution Capabilities</h2>
+            <section id="results">
+                <h2> Architectural Validation (Lab Results)</h2>
                 <ul>
-                    <li><strong>Sustained High-Precision:</strong> Repeatable performance across multi-step, chained operational requests.</li>
-                    <li><strong>Efficiency:</strong> Zero third-party API costs through native edge optimization.</li>
-                    <li><strong>Functional Reliability:</strong> Architecture designed specifically to bridge the barrier between abstract reasoning and industrial execution.</li>
+                    <li><strong>The Excel Benchmark:</strong> We utilize Excel as our initial production application because it demands strict, mathematical precision. It serves as an unforgiving development and benchmarking environment to prove the engine's reliability before horizontal expansion.</li>
+                    <li><strong>Architectural Proof of Concept:</strong> In our development lab, the system successfully executes complex, chained spreadsheet operations and graph generation. Validated against a strict target dataset, this massive accuracy improvement over baseline models proves our core routing engine fundamentally works.</li>
+                    <li><strong>Predictable Execution:</strong> Our architecture significantly reduces the random variance of standard models, making output behavior predictable across both successes and failures. When we introduce new features, overall accuracy naturally drops, but our training methods systematically restore performance back to the baseline.</li>
                 </ul>
             </section>
-
             <div class="status-badge">Current Phase: Advancing to Milestone M3 (High-Reliability Local Execution)</div>
         </main>
 
+        <!--- Footer -->
         <footer>
             <p>Assi Ariel | System Architect & Founder</p>
             <p>Contact for Technical Whitepaper and System Roadmap: <a href="mailto:assi.ariel@accuracies.ai">assi.ariel@accuracies.ai</a></p>
